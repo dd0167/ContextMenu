@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
         String sn=sidranum.getText().toString();
         if (s.equals(""))
         {
-            Toast.makeText(this, "בחר סדרה!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Select a series!", Toast.LENGTH_SHORT).show();
         }
         else if (fn.equals("") || sn.equals(""))
         {
-            Toast.makeText(this, "הכנס מספר!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Enter number!", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -54,14 +54,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void heshbonit(View view) {
-        sidra.setText("הסדרה שנבחרה היא חשבונית");
-        hefreshormacpil.setText("הכנס את הפרש הסדרה");
+        sidra.setText("The selected series is an invoice");
+        hefreshormacpil.setText("Enter the series difference");
         s="hes";
     }
 
     public void handasit(View view) {
-        sidra.setText("הסדרה שנבחרה היא הנדסית");
-        hefreshormacpil.setText("הכנס את מכפיל הסדרה");
+        sidra.setText("The series selected is engineering");
+        hefreshormacpil.setText("Insert the series multiplier");
         s="han";
     }
 }

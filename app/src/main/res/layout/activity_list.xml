@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
                 android:fontFamily="sans-serif"
-                android:text="לחץ על מספר"
+                android:text="Long press on a number"
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
                 android:onClick="back"
-                android:text="חזור" />
+                android:text="back" />
 
         </LinearLayout>
 

@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="בחר סדרה"
+        android:text="Select a series"
         android:textAlignment="center"
         android:textSize="30dp" />
 
@@ -36,14 +36,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="handasit"
-            android:text="הנדסית" />
+            android:text="Engineering" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="heshbonit"
-            android:text="חשבונית" />
+            android:text="Invoicing" />
     </LinearLayout>
 
     <Space
@@ -55,9 +55,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="הכנס את האיבר הראשון בסדרה"
+        android:text="Insert the first organ in the series"
         android:textAlignment="center"
-        android:textSize="30dp" />
+        android:textSize="25dp" />
 
     <EditText
         android:id="@+id/firstnum"
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:fontFamily="sans-serif"
-        android:text="הכנס הפרש/מכפיל הסדרה"
+        android:text="Insert the difference / multiplier of the series"
         android:textAlignment="center"
         android:textSize="30dp" />
 
@@ -102,7 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="enter"
-        android:text="התחל" />
+        android:text="start" />
 
     <Space
         android:layout_width="match_parent"

@@ -1,3 +1,9 @@
+/**
+ * @author		Dean David <dd0167@bs.amalnet.k12.il>
+ * @version	    1.6
+ * @since		11/11/2020
+ */
+
 package com.example.contextmenu;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,14 +38,14 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
         list=(ListView) findViewById(R.id.list);
         numbers=new String[20];
-        
-        if (s.equals("han"))
+
+        if (s.equals("han")) /** The selected series is an invoice series */
         {
             for(int i=1;i<=numbers.length;i++){
                 numbers[i-1]=EditNumber(fnum*(double)Math.pow((double)snum,(double)(i-1)));
             }
         }
-        else if (s.equals("hes"))
+        else if (s.equals("hes")) /** The series selected is an engineering series */
         {
             for(int i=1;i<=numbers.length;i++){
                 numbers[i-1]=EditNumber(fnum+(i-1)*snum);
@@ -57,6 +63,12 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         textView2=(TextView) findViewById(R.id.textView2);
     }
 
+    /**
+     * Converting a number to an integer in a string
+     * <p>
+     * @param	v
+     * @return	integer number in a string
+     */
     private String EditNumber(double v) {
         if((((double)((int)v))==(double)v))
         {
@@ -68,6 +80,11 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
+    /**
+     * Close activity
+     * <p>
+     * @param	view
+     */
     public void back(View view) {
         finish();
     }
@@ -76,28 +93,39 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
     }
 
+    /**
+     * Create context menu
+     * <p>
+     * @param	menu,v.menuinfo
+     */
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        menu.setHeaderTitle("בחר מה להציג");
-        menu.add("סכום המספרים");
-        menu.add("מיקום המספר");
+        menu.setHeaderTitle("Choose what to display");
+        menu.add("The sum of the numbers");
+        menu.add("Number location");
     }
 
+    /**
+     * Displays the selected figure
+     * <p>
+     * @param	item
+     * @return	true/false
+     */
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo a=(AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         String t=item.getTitle().toString();
-        if (t.equals("סכום המספרים")) {
+        if (t.equals("The sum of the numbers")) {
             sum=0;
             for(int i=0;i<=a.position;i++){
                 sum=sum+Double.parseDouble(numbers[i]);
             }
-            textView2.setText("סכום המספרים עד המספר שנלחץ: "+EditNumber(sum));
+            textView2.setText("The sum of the numbers up to the number pressed: "+EditNumber(sum));
             return true;
         }
-        else if (t.equals("מיקום המספר"))
+        else if (t.equals("Number location"))
         {
-            textView2.setText("מיקום המספר: "+a.position);
+            textView2.setText("Number location: "+a.position);
             return true;
         }
         return false;
