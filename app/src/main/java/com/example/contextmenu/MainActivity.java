@@ -9,6 +9,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * @author Dean David <dd0167@bs.amalnet.k12.il>
+ * @version 1.6
+ * @since 12 /11/2020
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     TextView sidra;
@@ -30,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         s="";
     }
 
+    /**
+     * Enter - Absorption of series data
+     * @param view the view
+     */
     public void enter(View view) {
         String fn=firstnum.getText().toString();
         String sn=sidranum.getText().toString();

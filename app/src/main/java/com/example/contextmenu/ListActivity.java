@@ -1,9 +1,3 @@
-/**
- * @author		Dean David <dd0167@bs.amalnet.k12.il>
- * @version	    1.6
- * @since		11/11/2020
- */
-
 package com.example.contextmenu;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,10 +13,19 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * @author Dean David <dd0167@bs.amalnet.k12.il>
+ * @version 1.6
+ * @since 12 /11/2020
+ */
+
 public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnCreateContextMenuListener  {
 
     ListView list;
     String[] numbers;
+    /**
+     * The Sum of the numbers
+     */
     double sum=0;
     TextView textView2;
 
@@ -83,7 +86,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     /**
      * Close activity
      * <p>
-     * @param	view
+     * @param view the view
      */
     public void back(View view) {
         finish();
